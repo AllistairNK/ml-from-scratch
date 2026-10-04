@@ -1,18 +1,15 @@
-# Neural Network + Backprop
+# Neural Network + Backprop: my notes
 
-## Key ideas (fill in on Day 1)
+The course app records your timed attempts and times automatically (Notes & history tab).
+Use this file for anything you want to remember.
+
+## Key ideas, in my own words
 
 - 
 
-## Attempts
+## Where I got stuck
 
-| Date | Stage | Time (min) | Peeked? | Stuck on |
-|------|-------|-----------:|---------|----------|
-| | Day 1 (reference) | | yes | |
-
-Stages: Day 1 (reference), Day 2 (blank), Day 3+ (timed), Spaced repeat
-
-**Next review:** 
+- 
 
 ## Interview gotchas
 

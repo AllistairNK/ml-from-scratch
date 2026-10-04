@@ -1,0 +1,40 @@
+{
+  "units": [
+    {
+      "id": "00_foundations",
+      "kind": "foundations",
+      "week": "Week 0",
+      "title": "Foundations",
+      "short": "Foundations",
+      "readings": [
+        {"file": "README.md", "title": "Unit overview"},
+        {"file": "F1_numpy.md", "title": "F1 · NumPy essentials"},
+        {"file": "F2_linear_algebra.md", "title": "F2 · Linear algebra"},
+        {"file": "F3_calculus_and_gradient_descent.md", "title": "F3 · Calculus & gradient descent"},
+        {"file": "F4_probability.md", "title": "F4 · Probability"},
+        {"file": "F5_ml_basics.md", "title": "F5 · ML basics"}
+      ]
+    },
+    {"id": "01_knn", "kind": "algorithm", "week": "Week 1", "title": "K-Nearest Neighbours", "short": "KNN", "target_minutes": 10, "priority": true},
+    {"id": "02_linear_regression", "kind": "algorithm", "week": "Week 1–2", "title": "Linear Regression (GD)", "short": "Linear Reg.", "target_minutes": 8, "priority": true},
+    {"id": "03_logistic_regression", "kind": "algorithm", "week": "Week 2", "title": "Logistic Regression", "short": "Logistic Reg.", "target_minutes": 10, "priority": true},
+    {"id": "04_kmeans", "kind": "algorithm", "week": "Week 2–3", "title": "K-Means", "short": "K-Means", "target_minutes": 12, "priority": true},
+    {"id": "05_neural_network", "kind": "algorithm", "week": "Week 3–4", "title": "Neural Network + Backprop", "short": "Neural Net", "target_minutes": 20, "priority": true},
+    {"id": "06_attention", "kind": "algorithm", "week": "Week 4–5", "title": "Attention / Multi-Head", "short": "Attention", "target_minutes": 15, "priority": true},
+    {"id": "07_naive_bayes", "kind": "algorithm", "week": "Week 5", "title": "Gaussian Naive Bayes", "short": "Naive Bayes", "target_minutes": 10},
+    {"id": "08_pca", "kind": "algorithm", "week": "Week 6", "title": "PCA", "short": "PCA", "target_minutes": 8},
+    {"id": "09_decision_tree", "kind": "algorithm", "week": "Week 6–7", "title": "Decision Tree", "short": "Decision Tree", "target_minutes": 20},
+    {"id": "10_random_forest", "kind": "algorithm", "week": "Week 7", "title": "Random Forest", "short": "Random Forest", "target_minutes": 8},
+    {
+      "id": "explain_only",
+      "kind": "explain",
+      "week": "Week 8",
+      "title": "Explain, don't code",
+      "short": "SVM & XGBoost",
+      "readings": [
+        {"file": "svm.md", "title": "SVM"},
+        {"file": "xgboost.md", "title": "XGBoost"}
+      ]
+    }
+  ]
+}

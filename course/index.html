@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ML From Scratch</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="menu-btn" aria-label="Toggle syllabus">☰</button>
+    <a class="brand" href="#/">ML From Scratch</a>
+    <span class="spacer"></span>
+    <span class="today" id="today-time" title="Time studied today (counted while the app is open and you're active)"></span>
+    <button class="btn" id="commit-btn" title="Commit progress.json and your practice files to git">Commit progress</button>
+  </header>
+  <div class="layout">
+    <nav class="sidebar" id="sidebar"></nav>
+    <main id="main"><p class="muted pad">Loading…</p></main>
+  </div>
+  <div class="toasts" id="toasts"></div>
+
+  <dialog id="commit-dialog">
+    <form method="dialog" class="dialog-body">
+      <h3>Save progress to git</h3>
+      <p class="muted">Commits <code>progress.json</code>, your practice files, attempts and notes. Nothing is pushed.</p>
+      <ul id="commit-changes" class="changes"></ul>
+      <label>Commit message
+        <input id="commit-message" type="text" placeholder="Save course progress">
+      </label>
+      <pre id="commit-output" class="output hidden"></pre>
+      <div class="row end">
+        <button class="btn ghost" value="cancel">Close</button>
+        <button class="btn primary" id="commit-go" value="default">Commit</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
