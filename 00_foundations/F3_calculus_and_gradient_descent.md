@@ -1,5 +1,7 @@
 # F3: Calculus and gradient descent
 
+**New words?** [loss](../00_basics/B1_glossary.md#loss) · [parameter](../00_basics/B1_glossary.md#parameter) · [gradient](../00_basics/B1_glossary.md#gradient) · [gradient descent](../00_basics/B1_glossary.md#gradient-descent) · [learning rate](../00_basics/B1_glossary.md#learning-rate) · [iteration](../00_basics/B1_glossary.md#iteration) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain what a derivative and a gradient tell you

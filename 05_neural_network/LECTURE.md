@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F3 chain rule](../00_foundations/F3_calculus_and_gradient_descent.md), [F4 softmax and cross-entropy](../00_foundations/F4_probability.md), [Logistic Regression](../03_logistic_regression/LECTURE.md) (a NN is stacked logistic-style layers).
 
+**New words?** [matrix](../00_basics/B1_glossary.md#matrix) · [weight](../00_basics/B1_glossary.md#weight) · [bias](../00_basics/B1_glossary.md#bias) · [loss](../00_basics/B1_glossary.md#loss) · [gradient](../00_basics/B1_glossary.md#gradient) · [one-hot](../00_basics/B1_glossary.md#one-hot) · [class](../00_basics/B1_glossary.md#class) · [shape](../00_basics/B1_glossary.md#shape) · [transpose](../00_basics/B1_glossary.md#transpose) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain why we need hidden layers and non-linear activations

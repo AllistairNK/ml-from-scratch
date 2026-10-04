@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F4 Bayes' rule, Gaussians, logs](../00_foundations/F4_probability.md), [F1 boolean masks](../00_foundations/F1_numpy.md).
 
+**New words?** [probability](../00_basics/B1_glossary.md#probability) · [mean](../00_basics/B1_glossary.md#mean) · [variance](../00_basics/B1_glossary.md#variance) · [class](../00_basics/B1_glossary.md#class) · [label](../00_basics/B1_glossary.md#label) · [feature](../00_basics/B1_glossary.md#feature) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - derive the Naive Bayes classifier from Bayes' rule

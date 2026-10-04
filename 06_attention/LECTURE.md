@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F2 the dot product as a similarity](../00_foundations/F2_linear_algebra.md), [F4 softmax](../00_foundations/F4_probability.md), [F1 reshape and transpose](../00_foundations/F1_numpy.md).
 
+**New words?** [vector](../00_basics/B1_glossary.md#vector) · [matrix](../00_basics/B1_glossary.md#matrix) · [dot product](../00_basics/B1_glossary.md#dot-product) · [shape](../00_basics/B1_glossary.md#shape) · [transpose](../00_basics/B1_glossary.md#transpose) · [axis](../00_basics/B1_glossary.md#axis) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain queries, keys and values with the "soft dictionary lookup" analogy
@@ -79,6 +81,10 @@ merge (concatenate the heads)                   -> (B,T,d_model) --W_o--> output
 `Q @ K.swapaxes(-2, -1)` computes `(B, h, T, T)` in one go. **merge_heads** is the exact reverse.
 
 The total compute is about the same as a single head of full width.
+
+![split_heads](../00_foundations/diagrams/split_heads.svg)
+
+*Blue features go to head 0 and orange to head 1. Every head still sees every token.*
 
 ## 7. From maths to code
 

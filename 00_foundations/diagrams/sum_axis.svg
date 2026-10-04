@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="896" height="284" viewBox="0 0 896 284" role="img" aria-label="Summing along axis 0 gives one total per column; along axis 1 one total per row; keepdims keeps a column shape">
+<title>Summing along axis 0 gives one total per column; along axis 1 one total per row; keepdims keeps a column shape</title>
+<style>
+.bg { fill: #ffffff; stroke: #e2e0da; }
+text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f1f1d; white-space: pre; }
+.mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.muted { fill: #6b6a65; }
+.title { font-weight: 600; }
+.cellline { stroke: #9a9993; }
+.arrow { stroke: #77766f; stroke-width: 1.6; fill: none; }
+.ah { fill: #77766f; }
+@media (prefers-color-scheme: dark) {
+  .bg { fill: #1f1f1e; stroke: #353532; }
+  text { fill: #ecebe6; }
+  .muted { fill: #a3a29a; }
+  .cellline { stroke: #6d6c66; }
+  .arrow { stroke: #a3a29a; }
+  .ah { fill: #a3a29a; }
+}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="895" height="283" rx="8"/>
+<text x="30.0" y="26.0" font-size="15" text-anchor="start" class="mono title">X.sum(axis=0)</text>
+<text x="30.0" y="44.0" font-size="12" text-anchor="start" class="muted">squash DOWN each column</text>
+<rect x="31" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="51.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="73" y="63" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="93.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="115" y="63" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="135.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="31" y="105" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="51.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="73" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="93.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="115" y="105" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="135.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<line x1="51.0" y1="150.0" x2="51.0" y2="178.0" class="arrow" marker-end="url(#ah)"/>
+<line x1="93.0" y1="150.0" x2="93.0" y2="178.0" class="arrow" marker-end="url(#ah)"/>
+<line x1="135.0" y1="150.0" x2="135.0" y2="178.0" class="arrow" marker-end="url(#ah)"/>
+<rect x="31" y="185" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="51.0" y="210.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="73" y="185" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="93.0" y="210.2" font-size="15" text-anchor="middle" class="mono" opacity="1">7</text>
+<rect x="115" y="185" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="135.0" y="210.2" font-size="15" text-anchor="middle" class="mono" opacity="1">9</text>
+<text x="30.0" y="246.0" font-size="12" text-anchor="start" class="muted">(2, 3) → (3,): axis 0 disappears</text>
+<text x="30.0" y="262.0" font-size="12" text-anchor="start" class="muted">one total per column (per feature)</text>
+<text x="300.0" y="26.0" font-size="15" text-anchor="start" class="mono title">X.sum(axis=1)</text>
+<text x="300.0" y="44.0" font-size="12" text-anchor="start" class="muted">squash ACROSS each row</text>
+<rect x="301" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="321.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="343" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="363.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="385" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="405.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="301" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="321.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="343" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="363.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="385" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="405.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<line x1="430.0" y1="83.0" x2="456.0" y2="83.0" class="arrow" marker-end="url(#ah)"/>
+<text x="462.0" y="88.0" font-size="15" text-anchor="start" class="mono" style="fill:#4c6ef5">6</text>
+<line x1="430.0" y1="125.0" x2="456.0" y2="125.0" class="arrow" marker-end="url(#ah)"/>
+<text x="462.0" y="130.0" font-size="15" text-anchor="start" class="mono" style="fill:#f08c00">15</text>
+<text x="300.0" y="172.0" font-size="12" text-anchor="start" class="muted">collected into a flat array:</text>
+<rect x="301" y="185" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="321.0" y="210.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<rect x="343" y="185" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="363.0" y="210.2" font-size="15" text-anchor="middle" class="mono" opacity="1">15</text>
+<text x="300.0" y="246.0" font-size="12" text-anchor="start" class="muted">(2, 3) → (2,): axis 1 disappears</text>
+<text x="300.0" y="262.0" font-size="12" text-anchor="start" class="muted">one total per row (per sample)</text>
+<text x="560.0" y="26.0" font-size="15" text-anchor="start" class="mono title">X.sum(axis=1, keepdims=True)</text>
+<text x="560.0" y="44.0" font-size="12" text-anchor="start" class="muted">same totals, kept as a column</text>
+<rect x="561" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="581.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="603" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="623.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="645" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="665.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="561" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="581.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="603" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="623.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="645" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="665.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<line x1="690.0" y1="83.0" x2="716.0" y2="83.0" class="arrow" marker-end="url(#ah)"/>
+<line x1="690.0" y1="125.0" x2="716.0" y2="125.0" class="arrow" marker-end="url(#ah)"/>
+<rect x="723" y="63" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="743.0" y="88.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<rect x="723" y="105" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="743.0" y="130.2" font-size="15" text-anchor="middle" class="mono" opacity="1">15</text>
+<text x="560.0" y="246.0" font-size="12" text-anchor="start" class="muted">(2, 3) → (2, 1): still 2-D</text>
+<text x="560.0" y="262.0" font-size="12" text-anchor="start" class="muted">so X / totals divides each row by its own total</text>
+</svg>

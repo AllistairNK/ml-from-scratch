@@ -106,16 +106,17 @@ function resolvePath(baseFile, rel) {
   return parts.join("/");
 }
 
-function routeForFile(path) {
+function routeForFile(path, anchor) {
   const [unitId, ...rest] = path.split("/");
   const unit = unitById(unitId);
   if (!unit) return null;
   const file = rest.join("/");
+  const at = anchor ? "@" + anchor : "";
   if (!file) return `#/unit/${unitId}/learn`;
   if (file.endsWith(".md")) {
-    if (file === "LECTURE.md") return `#/unit/${unitId}/learn`;
     if (file === "LOG.md") return `#/unit/${unitId}/notes`;
-    return `#/unit/${unitId}/learn/${file}`;
+    if (file === "LECTURE.md") return `#/unit/${unitId}/learn` + (at ? `/LECTURE.md${at}` : "");
+    return `#/unit/${unitId}/learn/${file}${at}`;
   }
   const stem = file.replace(/\.py$/, "");
   if (["solution", "explained", "example"].includes(stem)) return `#/unit/${unitId}/code/${stem}`;
@@ -125,14 +126,25 @@ function routeForFile(path) {
 
 function mountMarkdown(el, src, filePath) {
   el.innerHTML = renderMarkdown(src);
+  el.querySelectorAll("img[src]").forEach(img => {
+    const src = img.getAttribute("src");
+    if (!/^(https?:|data:|\/)/.test(src)) img.src = "/files/" + resolvePath(filePath, src);
+    img.loading = "lazy";
+  });
   el.querySelectorAll("a[href]").forEach(a => {
     const href = a.getAttribute("href");
-    if (/^(https?:|mailto:|#)/.test(href)) {
-      if (/^https?:/.test(href)) a.target = "_blank";
+    if (href.startsWith("#")) {
+      // A link to a heading on the same page: scroll instead of changing the app's route.
+      a.onclick = e => { e.preventDefault(); scrollToAnchor(href.slice(1)); };
       return;
     }
-    const target = resolvePath(filePath, href.split("#")[0]);
-    const route = routeForFile(target.replace(/\/$/, ""));
+    if (/^(https?:|mailto:)/.test(href)) {
+      a.target = "_blank";
+      return;
+    }
+    const [relPath, anchor] = href.split("#");
+    const target = resolvePath(filePath, relPath);
+    const route = routeForFile(target.replace(/\/$/, ""), anchor);
     if (route) a.setAttribute("href", route);
     else { a.removeAttribute("href"); a.title = target; }
   });
@@ -303,7 +315,17 @@ function renderUnit(unitId, tab, sub) {
   else if (tab === "notes") renderNotes(unit, body);
 }
 
+function scrollToAnchor(id, smooth = true) {
+  const el = document.getElementById(decodeURIComponent(id));
+  if (!el) return;
+  el.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+  el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 1600);
+}
+
 async function renderLearn(unit, body, sub) {
+  const [subFile, anchor] = (sub || "").split("@");
+  sub = subFile;
   let file = "LECTURE.md";
   let nav = "";
   if (unit.readings) {
@@ -317,6 +339,7 @@ async function renderLearn(unit, body, sub) {
     <span class="muted">Fill these in yourself, in your own words.</span></div>` : ""}<article class="md" id="md"></article>`;
   const { content } = await api(`/api/file?path=${encodeURIComponent(path)}`);
   mountMarkdown($("#md"), content, path);
+  if (anchor) setTimeout(() => scrollToAnchor(anchor, false), 50);
   if (editable) {
     $("#edit-md").onclick = () => {
       body.querySelector(".row").innerHTML = `<button class="btn primary" id="save-md">Save</button><button class="btn ghost" id="cancel-md">Cancel</button>`;
@@ -379,7 +402,7 @@ async function runChecks(unit, target, outEl, btn, peeked = false) {
 function renderLab(unit, body, sub) {
   const files = unit.files || {};
   const active = S.progress.active_attempt && S.progress.active_attempt.unit === unit.id ? S.progress.active_attempt : null;
-  const modes = unit.kind === "foundations" ? [["practice", "NumPy drills"]]
+  const modes = unit.kind === "foundations" ? [["practice", unit.lab_name || "Exercises"]]
     : [["practice", "1 · Practice (hints)"], ["blank", "2 · Blank rewrite"], ["attempt", "3 · Timed attempts"]];
   let mode = (sub || "").split(":")[0];
   if (!modes.some(m => m[0] === mode)) mode = active ? "attempt" : "practice";
@@ -408,8 +431,8 @@ function renderLab(unit, body, sub) {
 
 function renderLabStart(unit, mode, el) {
   const info = {
-    practice: ["Practice with hints", unit.kind === "foundations"
-      ? "Twelve one-line NumPy functions. You get your own copy of the drills (my_practice.py); the template stays untouched."
+    practice: [unit.lab_name || "Practice with hints", unit.kind === "foundations"
+      ? unit.lab_blurb
       : "You get your own copy of practice.py (saved as my_practice.py). Write one line under each numbered hint, then run the checks.", "Start practice"],
     blank: ["Blank-file rewrite", "Write the whole implementation from memory in day2_blank.py. Peek at the solution only when stuck, and note where in Notes & history.", "Start blank rewrite"],
     attempt: ["Timed attempt", `A fresh file in attempts/ and a running timer. No peeking: if you open the solution, the attempt is marked as peeked. Pass the checks under ${unit.target_minutes} minutes to become interview-ready.`, "Start timed attempt"],

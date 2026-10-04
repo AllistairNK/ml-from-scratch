@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F2 eigenvectors](../00_foundations/F2_linear_algebra.md), [F1 centering and axis](../00_foundations/F1_numpy.md).
 
+**New words?** [variance](../00_basics/B1_glossary.md#variance) · [mean](../00_basics/B1_glossary.md#mean) · [matrix](../00_basics/B1_glossary.md#matrix) · [vector](../00_basics/B1_glossary.md#vector) · [feature](../00_basics/B1_glossary.md#feature) · [supervised and unsupervised](../00_basics/B1_glossary.md#supervised-and-unsupervised) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain PCA as "find the directions of maximum variance"

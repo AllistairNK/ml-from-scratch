@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F2 dot products and matrices](../00_foundations/F2_linear_algebra.md), [F3 gradient descent](../00_foundations/F3_calculus_and_gradient_descent.md).
 
+**New words?** [regression](../00_basics/B1_glossary.md#regression) · [weight](../00_basics/B1_glossary.md#weight) · [bias](../00_basics/B1_glossary.md#bias) · [loss](../00_basics/B1_glossary.md#loss) · [gradient](../00_basics/B1_glossary.md#gradient) · [gradient descent](../00_basics/B1_glossary.md#gradient-descent) · [learning rate](../00_basics/B1_glossary.md#learning-rate) · [iteration](../00_basics/B1_glossary.md#iteration) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - write down the model, the loss and the gradients

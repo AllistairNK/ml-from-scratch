@@ -1,5 +1,7 @@
 # F2: Linear algebra for ML
 
+**New words?** [vector](../00_basics/B1_glossary.md#vector) · [matrix](../00_basics/B1_glossary.md#matrix) · [dot product](../00_basics/B1_glossary.md#dot-product) · [distance](../00_basics/B1_glossary.md#distance) · [transpose](../00_basics/B1_glossary.md#transpose) · [weight](../00_basics/B1_glossary.md#weight) · [feature](../00_basics/B1_glossary.md#feature) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - compute a dot product and a matrix product, and predict their shapes
@@ -23,6 +25,10 @@ w = np.array([0.5, -1.0])
 x @ w          # 2*0.5 + 3*(-1) = -2.0
 ```
 
+![Dot product](diagrams/dot.svg)
+
+*Matching colours are multiplied together, then everything is added up.*
+
 **Two ways to read it:**
 
 - **A weighted sum.** Each feature gets a weight saying how much it matters. This is the heart
@@ -44,6 +50,10 @@ w = np.array([0.5, -1.0])   # (2,)
 X @ w                       # (3,): one weighted sum per sample -> [-1.5, -2.5, -3.5]
 ```
 
+![Matrix times vector](diagrams/matmul.svg)
+
+*The orange row of X is dotted with w to give the orange output. Every other row works the same way.*
+
 That's why the linear model `X @ w + b` predicts every sample at once: row *i* of the result is
 the dot product of sample *i* with the weights.
 
@@ -54,6 +64,11 @@ columns of `W`:
 W = np.random.randn(2, 4)   # 2 inputs -> 4 hidden units
 H = X @ W                   # (3, 2) @ (2, 4) -> (3, 4): each sample now has 4 features
 ```
+
+
+![Transpose](diagrams/transpose.svg)
+
+*Each coloured column of X becomes a row of X.T.*
 
 **The transpose** `A.T` swaps the rows and columns: `(n, k) -> (k, n)`. You'll see it in gradients
 like `X.T @ error`, which is "for each feature, sum feature × error over all samples".

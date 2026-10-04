@@ -1,5 +1,7 @@
 # F5: ML basics: the vocabulary
 
+**New words?** [dataset](../00_basics/B1_glossary.md#dataset) · [sample](../00_basics/B1_glossary.md#sample) · [feature](../00_basics/B1_glossary.md#feature) · [label](../00_basics/B1_glossary.md#label) · [class](../00_basics/B1_glossary.md#class) · [model](../00_basics/B1_glossary.md#model) · [training](../00_basics/B1_glossary.md#training) · [prediction](../00_basics/B1_glossary.md#prediction) · [parameter](../00_basics/B1_glossary.md#parameter) · [hyperparameter](../00_basics/B1_glossary.md#hyperparameter) · [training data and test data](../00_basics/B1_glossary.md#training-data-and-test-data) · [overfitting](../00_basics/B1_glossary.md#overfitting) · [underfitting](../00_basics/B1_glossary.md#underfitting) · [accuracy](../00_basics/B1_glossary.md#accuracy) · [loss](../00_basics/B1_glossary.md#loss) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - classify a problem as supervised (regression or classification) or unsupervised

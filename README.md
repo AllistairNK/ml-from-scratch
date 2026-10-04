@@ -29,6 +29,7 @@ The app needs an internet connection to load its libraries (Markdown, maths and 
 
 | Week | Unit | Lecture | Target time |
 |------|------|---------|------------:|
+| Start | The basics: a glossary of every term, Python basics, your first model | [00_basics](00_basics/README.md) | |
 | 0 | Foundations: NumPy, linear algebra, calculus, probability, ML basics | [00_foundations](00_foundations/README.md) | |
 | 1 | K-Nearest Neighbours | [lecture](01_knn/LECTURE.md) | 10 min |
 | 1–2 | Linear Regression (gradient descent) | [lecture](02_linear_regression/LECTURE.md) | 8 min |
@@ -43,6 +44,9 @@ The app needs an internet connection to load its libraries (Markdown, maths and 
 | 8 | Explain, don't code: [SVM](explain_only/svm.md), [XGBoost](explain_only/xgboost.md) | your own notes | |
 
 Weeks 1–5 are the priority set. If an interview comes early, do those first and skim the rest.
+
+**New to ML or Python?** Start with [the basics](00_basics/README.md). Every lecture begins with a "New words?" line
+linking its terms to the [glossary](00_basics/B1_glossary.md).
 
 ## How each unit works
 

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="517" height="236" viewBox="0 0 517 236" role="img" aria-label="Slicing y[1:4] keeps the items at index 1, 2 and 3">
+<title>Slicing y[1:4] keeps the items at index 1, 2 and 3</title>
+<style>
+.bg { fill: #ffffff; stroke: #e2e0da; }
+text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f1f1d; white-space: pre; }
+.mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.muted { fill: #6b6a65; }
+.title { font-weight: 600; }
+.cellline { stroke: #9a9993; }
+.arrow { stroke: #77766f; stroke-width: 1.6; fill: none; }
+.ah { fill: #77766f; }
+@media (prefers-color-scheme: dark) {
+  .bg { fill: #1f1f1e; stroke: #353532; }
+  text { fill: #ecebe6; }
+  .muted { fill: #a3a29a; }
+  .cellline { stroke: #6d6c66; }
+  .arrow { stroke: #a3a29a; }
+  .ah { fill: #a3a29a; }
+}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="516" height="235" rx="8"/>
+<text x="20.0" y="26.0" font-size="14" text-anchor="start" class="mono title">y[1:4]   start = 1, stop = 4 (the stop is NOT included)</text>
+<rect x="31" y="71" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="0.3"/>
+<text x="51.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="0.3">10</text>
+<rect x="73" y="71" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="93.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="1">20</text>
+<rect x="115" y="71" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="135.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="1">30</text>
+<rect x="157" y="71" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="177.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="1">40</text>
+<rect x="199" y="71" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="0.3"/>
+<text x="219.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="0.3">50</text>
+<text x="51.0" y="63.0" font-size="12" text-anchor="middle" class="muted">index 0</text>
+<text x="93.0" y="63.0" font-size="12" text-anchor="middle" class="muted">1</text>
+<text x="135.0" y="63.0" font-size="12" text-anchor="middle" class="muted">2</text>
+<text x="177.0" y="63.0" font-size="12" text-anchor="middle" class="muted">3</text>
+<text x="219.0" y="63.0" font-size="12" text-anchor="middle" class="muted">4</text>
+<text x="93.0" y="130.0" font-size="12" text-anchor="middle" class="" style="fill:#4c6ef5">↑ start</text>
+<text x="219.0" y="130.0" font-size="12" text-anchor="middle" class="" style="fill:#e03131">↑ stop (excluded)</text>
+<line x1="135.0" y1="140.0" x2="135.0" y2="170.0" class="arrow" marker-end="url(#ah)"/>
+<rect x="73" y="177" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="93.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">20</text>
+<rect x="115" y="177" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="135.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">30</text>
+<rect x="157" y="177" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="177.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">40</text>
+<text x="210.0" y="201.0" font-size="12" text-anchor="start" class="muted">3 items: indexes 1, 2, 3</text>
+</svg>

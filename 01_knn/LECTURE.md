@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F1 NumPy](../00_foundations/F1_numpy.md) (broadcasting, argsort, bincount), [F2 distance](../00_foundations/F2_linear_algebra.md).
 
+**New words?** [sample](../00_basics/B1_glossary.md#sample) · [feature](../00_basics/B1_glossary.md#feature) · [label](../00_basics/B1_glossary.md#label) · [class 0 and class 1](../00_basics/B1_glossary.md#class-0-and-class-1) · [distance](../00_basics/B1_glossary.md#distance) · [index](../00_basics/B1_glossary.md#index) · [hyperparameter](../00_basics/B1_glossary.md#hyperparameter) · [overfitting](../00_basics/B1_glossary.md#overfitting) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain KNN in one sentence and say why it is called a "lazy learner"
@@ -78,6 +80,14 @@ The same point gets a different answer as k grows. **k is the key hyperparameter
 | majority vote | `np.bincount(row).argmax()` for each row |
 
 The broadcasting line is the hard one. Re-read [F1 §4](../00_foundations/F1_numpy.md) until it's obvious.
+
+![Pairwise differences by broadcasting](../00_foundations/diagrams/pairwise.svg)
+
+*The same idea in 1-D: a column of points minus a row of training points gives every difference at once. With features, there is one more axis.*
+
+![argsort, take k, look up labels](../00_foundations/diagrams/argsort_topk.svg)
+
+*One test point's journey through predict(): blue and orange follow its two nearest neighbours.*
 
 ## 6. Choosing k, and pitfalls
 

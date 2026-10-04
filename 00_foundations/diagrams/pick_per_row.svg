@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="562" height="226" viewBox="0 0 562 226" role="img" aria-label="probs[np.arange(n), y] picks one value per row, at the column given by y">
+<title>probs[np.arange(n), y] picks one value per row, at the column given by y</title>
+<style>
+.bg { fill: #ffffff; stroke: #e2e0da; }
+text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f1f1d; white-space: pre; }
+.mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.muted { fill: #6b6a65; }
+.title { font-weight: 600; }
+.cellline { stroke: #9a9993; }
+.arrow { stroke: #77766f; stroke-width: 1.6; fill: none; }
+.ah { fill: #77766f; }
+@media (prefers-color-scheme: dark) {
+  .bg { fill: #1f1f1e; stroke: #353532; }
+  text { fill: #ecebe6; }
+  .muted { fill: #a3a29a; }
+  .cellline { stroke: #6d6c66; }
+  .arrow { stroke: #a3a29a; }
+  .ah { fill: #a3a29a; }
+}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="561" height="225" rx="8"/>
+<text x="20.0" y="26.0" font-size="14" text-anchor="start" class="mono title">probs[np.arange(3), y]    with y = [0, 1, 1]</text>
+<text x="20.0" y="44.0" font-size="12" text-anchor="start" class="muted">pairs up row i with column y[i]: one value per row</text>
+<rect x="151" y="83" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="171.0" y="108.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0.7</text>
+<rect x="193" y="83" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="0.3"/>
+<text x="213.0" y="108.2" font-size="15" text-anchor="middle" class="mono" opacity="0.3">0.3</text>
+<rect x="151" y="125" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="0.3"/>
+<text x="171.0" y="150.2" font-size="15" text-anchor="middle" class="mono" opacity="0.3">0.2</text>
+<rect x="193" y="125" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="213.0" y="150.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0.8</text>
+<rect x="151" y="167" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="0.3"/>
+<text x="171.0" y="192.2" font-size="15" text-anchor="middle" class="mono" opacity="0.3">0.6</text>
+<rect x="193" y="167" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="213.0" y="192.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0.4</text>
+<text x="142.0" y="107.0" font-size="12" text-anchor="end" class="muted">row 0, y=0</text>
+<text x="142.0" y="149.0" font-size="12" text-anchor="end" class="muted">row 1, y=1</text>
+<text x="142.0" y="191.0" font-size="12" text-anchor="end" class="muted">row 2, y=1</text>
+<text x="171.0" y="75.0" font-size="12" text-anchor="middle" class="muted">col 0</text>
+<text x="213.0" y="75.0" font-size="12" text-anchor="middle" class="muted">col 1</text>
+<line x1="246.0" y1="145.0" x2="304.0" y2="145.0" class="arrow" marker-end="url(#ah)"/>
+<rect x="315" y="125.0" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="335.0" y="150.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0.7</text>
+<rect x="357" y="125.0" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="377.0" y="150.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0.8</text>
+<rect x="399" y="125.0" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="419.0" y="150.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0.4</text>
+<text x="314.0" y="184.0" font-size="12" text-anchor="start" class="muted">each sample&#x27;s probability</text>
+<text x="314.0" y="200.0" font-size="12" text-anchor="start" class="muted">for its TRUE class (cross-entropy)</text>
+</svg>

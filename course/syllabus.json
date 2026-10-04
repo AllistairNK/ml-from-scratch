@@ -1,11 +1,30 @@
 {
   "units": [
     {
+      "id": "00_basics",
+      "kind": "foundations",
+      "week": "Start here",
+      "title": "The basics",
+      "short": "Basics",
+      "lab_name": "Exercises",
+      "lab_label": "Start-here exercises pass",
+      "lab_blurb": "Twelve small exercises, from list indexes up to your first model class. You get your own copy (my_practice.py); each exercise is checked separately, so do them one at a time.",
+      "readings": [
+        {"file": "README.md", "title": "How to study"},
+        {"file": "B1_glossary.md", "title": "B1 · Glossary"},
+        {"file": "B2_python_basics.md", "title": "B2 · Python basics"},
+        {"file": "B3_first_model.md", "title": "B3 · Your first model"}
+      ]
+    },
+    {
       "id": "00_foundations",
       "kind": "foundations",
       "week": "Week 0",
       "title": "Foundations",
       "short": "Foundations",
+      "lab_name": "NumPy drills",
+      "lab_label": "NumPy drills pass",
+      "lab_blurb": "Twelve one-line NumPy functions. You get your own copy of the drills (my_practice.py); the template stays untouched.",
       "readings": [
         {"file": "README.md", "title": "Unit overview"},
         {"file": "F1_numpy.md", "title": "F1 · NumPy essentials"},

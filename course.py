@@ -58,7 +58,7 @@ def load_syllabus():
 def steps_for(unit):
     if unit["kind"] == "foundations":
         steps = [{"id": "read:" + r["file"], "label": "Read " + r["title"], "auto": False} for r in unit["readings"]]
-        steps.append({"id": "drills", "label": "NumPy drills pass", "auto": True})
+        steps.append({"id": "drills", "label": unit.get("lab_label", "Exercises pass"), "auto": True})
         return steps
     if unit["kind"] == "explain":
         steps = []
@@ -136,7 +136,10 @@ def mark(data, unit_id, step, done=True):
 
 # ---------------------------------------------------------------- paths
 
-def safe_path(rel, write=False):
+IMAGE_TYPES = {".svg": "image/svg+xml", ".png": "image/png"}
+
+
+def safe_path(rel, write=False, image=False):
     """Resolve a repo-relative path, refusing anything outside the course units."""
     rel = rel.replace("\\", "/").lstrip("/")
     if ".." in rel.split("/"):
@@ -159,6 +162,9 @@ def safe_path(rel, write=False):
         )
         if not allowed:
             raise ValueError("this file is read-only in the app: " + rel)
+    elif image:
+        if os.path.splitext(rel)[1] not in IMAGE_TYPES:
+            raise ValueError("not an image")
     elif not rel.endswith((".md", ".py")):
         raise ValueError("only .md and .py files can be read")
     return full
@@ -241,7 +247,7 @@ def record_pass(data, unit, target, peeked):
 
     if unit["kind"] == "foundations":
         if target == "my_practice":
-            done("drills", "NumPy drills complete!")
+            done("drills", "{}: all exercises complete!".format(unit["title"]))
         return events
     if target == "my_practice":
         done("practice", "Practice step complete.")
@@ -340,6 +346,18 @@ class Handler(SimpleHTTPRequestHandler):
                     return self.send_json({"error": "not found"}, 404)
                 with open(full, encoding="utf-8") as f:
                     return self.send_json({"path": query["path"], "content": f.read()})
+            if url.path.startswith("/files/"):
+                full = safe_path(url.path[len("/files/"):], image=True)
+                if not os.path.exists(full):
+                    return self.send_json({"error": "not found"}, 404)
+                with open(full, "rb") as f:
+                    data = f.read()
+                self.send_response(200)
+                self.send_header("Content-Type", IMAGE_TYPES[os.path.splitext(full)[1]])
+                self.send_header("Content-Length", str(len(data)))
+                self.send_header("Cache-Control", "no-cache")
+                self.end_headers()
+                return self.wfile.write(data)
         except (ValueError, KeyError) as e:
             return self.send_json({"error": str(e)}, 400)
         if url.path.startswith("/api/"):

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="517" height="274" viewBox="0 0 517 274" role="img" aria-label="Dot product: multiply matching positions, then add the results">
+<title>Dot product: multiply matching positions, then add the results</title>
+<style>
+.bg { fill: #ffffff; stroke: #e2e0da; }
+text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f1f1d; white-space: pre; }
+.mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.muted { fill: #6b6a65; }
+.title { font-weight: 600; }
+.cellline { stroke: #9a9993; }
+.arrow { stroke: #77766f; stroke-width: 1.6; fill: none; }
+.ah { fill: #77766f; }
+@media (prefers-color-scheme: dark) {
+  .bg { fill: #1f1f1e; stroke: #353532; }
+  text { fill: #ecebe6; }
+  .muted { fill: #a3a29a; }
+  .cellline { stroke: #6d6c66; }
+  .arrow { stroke: #a3a29a; }
+  .ah { fill: #a3a29a; }
+}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="516" height="273" rx="8"/>
+<text x="20.0" y="26.0" font-size="14" text-anchor="start" class="mono title">a @ b   (dot product)    a = [1, 2, 3],  b = [4, 0, -1]</text>
+<rect x="81" y="61" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="101.0" y="86.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="123" y="61" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="143.0" y="86.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="165" y="61" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="185.0" y="86.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<text x="70.0" y="86.0" font-size="14" text-anchor="end" class="mono title">a</text>
+<rect x="81" y="111" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="101.0" y="136.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="123" y="111" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="143.0" y="136.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0</text>
+<rect x="165" y="111" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="185.0" y="136.2" font-size="15" text-anchor="middle" class="mono" opacity="1">−1</text>
+<text x="70.0" y="136.0" font-size="14" text-anchor="end" class="mono title">b</text>
+<line x1="101.0" y1="156.0" x2="101.0" y2="182.0" class="arrow" marker-end="url(#ah)"/>
+<line x1="143.0" y1="156.0" x2="143.0" y2="182.0" class="arrow" marker-end="url(#ah)"/>
+<line x1="185.0" y1="156.0" x2="185.0" y2="182.0" class="arrow" marker-end="url(#ah)"/>
+<rect x="81" y="189" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="101.0" y="214.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="123" y="189" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="143.0" y="214.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0</text>
+<rect x="165" y="189" width="40" height="40" rx="3" fill="#2f9e44" fill-opacity="0.24" stroke="#2f9e44" stroke-width="1.3" opacity="1"/>
+<text x="185.0" y="214.2" font-size="15" text-anchor="middle" class="mono" opacity="1">−3</text>
+<text x="70.0" y="214.0" font-size="13" text-anchor="end" class="mono muted">a×b</text>
+<line x1="216.0" y1="209.0" x2="266.0" y2="209.0" class="arrow" marker-end="url(#ah)"/>
+<text x="241.0" y="201.0" font-size="12" text-anchor="middle" class="mono muted">sum</text>
+<rect x="275" y="189" width="40" height="40" rx="3" fill="#ae3ec9" fill-opacity="0.24" stroke="#ae3ec9" stroke-width="1.3" opacity="1"/>
+<text x="295.0" y="214.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<text x="80.0" y="252.0" font-size="12" text-anchor="start" class="muted">multiply matching positions, then add up:  4 + 0 − 3 = 1</text>
+</svg>

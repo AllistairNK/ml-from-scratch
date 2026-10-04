@@ -1,5 +1,7 @@
 # F4: Probability for ML
 
+**New words?** [probability](../00_basics/B1_glossary.md#probability) · [class](../00_basics/B1_glossary.md#class) · [mean](../00_basics/B1_glossary.md#mean) · [variance](../00_basics/B1_glossary.md#variance) · [threshold](../00_basics/B1_glossary.md#threshold) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - use conditional probability and Bayes' rule

@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F1 broadcasting and boolean masks](../00_foundations/F1_numpy.md), [F2 distance](../00_foundations/F2_linear_algebra.md), [KNN](../01_knn/LECTURE.md) (the same distance trick).
 
+**New words?** [clustering](../00_basics/B1_glossary.md#clustering) · [supervised and unsupervised](../00_basics/B1_glossary.md#supervised-and-unsupervised) · [centroid](../00_basics/B1_glossary.md#centroid) · [distance](../00_basics/B1_glossary.md#distance) · [mean](../00_basics/B1_glossary.md#mean) · [mask](../00_basics/B1_glossary.md#mask) · [iteration](../00_basics/B1_glossary.md#iteration) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain unsupervised learning and what K-Means optimises

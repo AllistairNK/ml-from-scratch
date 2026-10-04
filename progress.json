@@ -1,7 +1,25 @@
 {
   "active_attempt": null,
-  "runs": [],
-  "time": {},
-  "units": {},
+  "runs": [
+    {
+      "at": "2026-10-04T12:43:34",
+      "passed": false,
+      "target": "my_practice",
+      "unit": "00_foundations"
+    }
+  ],
+  "time": {
+    "2026-10-04": {
+      "00_basics": 5,
+      "00_foundations": 31,
+      "explain_only": 2
+    }
+  },
+  "units": {
+    "00_foundations": {
+      "attempts": [],
+      "checks": {}
+    }
+  },
   "version": 1
 }

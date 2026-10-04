@@ -2,6 +2,8 @@
 
 **Prerequisites:** [Linear Regression](../02_linear_regression/LECTURE.md), [F4 sigmoid and cross-entropy](../00_foundations/F4_probability.md).
 
+**New words?** [classification](../00_basics/B1_glossary.md#classification) · [probability](../00_basics/B1_glossary.md#probability) · [threshold](../00_basics/B1_glossary.md#threshold) · [weight](../00_basics/B1_glossary.md#weight) · [bias](../00_basics/B1_glossary.md#bias) · [loss](../00_basics/B1_glossary.md#loss) · [gradient](../00_basics/B1_glossary.md#gradient) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain why we wrap a linear model in a sigmoid for classification

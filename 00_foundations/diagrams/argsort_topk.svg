@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="582" height="432" viewBox="0 0 582 432" role="img" aria-label="KNN: argsort the distances, keep the first k indexes, and look up their labels">
+<title>KNN: argsort the distances, keep the first k indexes, and look up their labels</title>
+<style>
+.bg { fill: #ffffff; stroke: #e2e0da; }
+text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f1f1d; white-space: pre; }
+.mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.muted { fill: #6b6a65; }
+.title { font-weight: 600; }
+.cellline { stroke: #9a9993; }
+.arrow { stroke: #77766f; stroke-width: 1.6; fill: none; }
+.ah { fill: #77766f; }
+@media (prefers-color-scheme: dark) {
+  .bg { fill: #1f1f1e; stroke: #353532; }
+  text { fill: #ecebe6; }
+  .muted { fill: #a3a29a; }
+  .cellline { stroke: #6d6c66; }
+  .arrow { stroke: #a3a29a; }
+  .ah { fill: #a3a29a; }
+}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="581" height="431" rx="8"/>
+<text x="20.0" y="26.0" font-size="14" text-anchor="start" class="title">KNN for one test point:  argsort → take k → look up labels</text>
+<text x="136.0" y="104.0" font-size="13" text-anchor="end" class="mono title">dists</text>
+<rect x="151" y="79" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="1"/>
+<text x="171.0" y="104.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="193" y="79" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="213.0" y="104.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="235" y="79" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="1"/>
+<text x="255.0" y="104.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="277" y="79" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="297.0" y="104.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<text x="171.0" y="71.0" font-size="12" text-anchor="middle" class="muted">index 0</text>
+<text x="213.0" y="71.0" font-size="12" text-anchor="middle" class="muted">1</text>
+<text x="255.0" y="71.0" font-size="12" text-anchor="middle" class="muted">2</text>
+<text x="297.0" y="71.0" font-size="12" text-anchor="middle" class="muted">3</text>
+<text x="334.0" y="103.0" font-size="12" text-anchor="start" class="muted">distance to each training point</text>
+<line x1="192.0" y1="124.0" x2="192.0" y2="142.0" class="arrow" marker-end="url(#ah)"/>
+<text x="136.0" y="174.0" font-size="13" text-anchor="end" class="mono title">np.argsort(dists)</text>
+<rect x="151" y="149" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="171.0" y="174.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="193" y="149" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="213.0" y="174.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="235" y="149" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="1"/>
+<text x="255.0" y="174.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="277" y="149" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="1"/>
+<text x="297.0" y="174.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0</text>
+<text x="334.0" y="173.0" font-size="12" text-anchor="start" class="muted">indexes, closest first</text>
+<line x1="192.0" y1="194.0" x2="192.0" y2="212.0" class="arrow" marker-end="url(#ah)"/>
+<text x="136.0" y="244.0" font-size="13" text-anchor="end" class="mono title">[:k]   (k = 2)</text>
+<rect x="151" y="219" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="171.0" y="244.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="193" y="219" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="213.0" y="244.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<text x="334.0" y="243.0" font-size="12" text-anchor="start" class="muted">the k nearest neighbours</text>
+<text x="136.0" y="328.0" font-size="13" text-anchor="end" class="mono title">y_train</text>
+<rect x="151" y="303" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="1"/>
+<text x="171.0" y="328.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="193" y="303" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="213.0" y="328.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0</text>
+<rect x="235" y="303" width="40" height="40" rx="3" fill="none" fill-opacity="0" class="cellline" stroke-width="1.3" opacity="1"/>
+<text x="255.0" y="328.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="277" y="303" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="297.0" y="328.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0</text>
+<text x="171.0" y="295.0" font-size="12" text-anchor="middle" class="muted">index 0</text>
+<text x="213.0" y="295.0" font-size="12" text-anchor="middle" class="muted">1</text>
+<text x="255.0" y="295.0" font-size="12" text-anchor="middle" class="muted">2</text>
+<text x="297.0" y="295.0" font-size="12" text-anchor="middle" class="muted">3</text>
+<text x="334.0" y="327.0" font-size="12" text-anchor="start" class="muted">labels of all training points</text>
+<line x1="192.0" y1="348.0" x2="192.0" y2="366.0" class="arrow" marker-end="url(#ah)"/>
+<text x="136.0" y="398.0" font-size="13" text-anchor="end" class="mono title">y_train[[1, 3]]</text>
+<rect x="151" y="373" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="171.0" y="398.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0</text>
+<rect x="193" y="373" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="213.0" y="398.2" font-size="15" text-anchor="middle" class="mono" opacity="1">0</text>
+<text x="334.0" y="397.0" font-size="12" text-anchor="start" class="muted">neighbours&#x27; labels → vote: class 0</text>
+</svg>

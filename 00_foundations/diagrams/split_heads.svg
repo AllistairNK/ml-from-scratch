@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="977" height="274" viewBox="0 0 977 274" role="img" aria-label="split_heads reshapes the features into heads, then moves the head axis first">
+<title>split_heads reshapes the features into heads, then moves the head axis first</title>
+<style>
+.bg { fill: #ffffff; stroke: #e2e0da; }
+text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f1f1d; white-space: pre; }
+.mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.muted { fill: #6b6a65; }
+.title { font-weight: 600; }
+.cellline { stroke: #9a9993; }
+.arrow { stroke: #77766f; stroke-width: 1.6; fill: none; }
+.ah { fill: #77766f; }
+@media (prefers-color-scheme: dark) {
+  .bg { fill: #1f1f1e; stroke: #353532; }
+  text { fill: #ecebe6; }
+  .muted { fill: #a3a29a; }
+  .cellline { stroke: #6d6c66; }
+  .arrow { stroke: #a3a29a; }
+  .ah { fill: #a3a29a; }
+}
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="976" height="273" rx="8"/>
+<text x="20.0" y="26.0" font-size="15" text-anchor="start" class="title">Multi-head attention: split_heads (batch axis left out)</text>
+<text x="20.0" y="44.0" font-size="12" text-anchor="start" class="muted">x: 3 tokens × d_model = 4 features, n_heads = 2, so d_head = 2</text>
+<rect x="81" y="93" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="101.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="123" y="93" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="143.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="165" y="93" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="185.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="207" y="93" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="227.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="81" y="135" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="101.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="123" y="135" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="143.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<rect x="165" y="135" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="185.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">7</text>
+<rect x="207" y="135" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="227.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">8</text>
+<rect x="81" y="177" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="101.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">9</text>
+<rect x="123" y="177" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="143.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">10</text>
+<rect x="165" y="177" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="185.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">11</text>
+<rect x="207" y="177" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="227.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">12</text>
+<text x="72.0" y="117.0" font-size="12" text-anchor="end" class="muted">token 0</text>
+<text x="72.0" y="159.0" font-size="12" text-anchor="end" class="muted">token 1</text>
+<text x="72.0" y="201.0" font-size="12" text-anchor="end" class="muted">token 2</text>
+<text x="101.0" y="85.0" font-size="12" text-anchor="middle" class="muted">0</text>
+<text x="143.0" y="85.0" font-size="12" text-anchor="middle" class="muted">1</text>
+<text x="185.0" y="85.0" font-size="12" text-anchor="middle" class="muted">2</text>
+<text x="227.0" y="85.0" font-size="12" text-anchor="middle" class="muted">3</text>
+<text x="80.0" y="236.0" font-size="12" text-anchor="start" class="mono muted">x: (T, d_model) = (3, 4)</text>
+<line x1="260.0" y1="155.0" x2="318.0" y2="155.0" class="arrow" marker-end="url(#ah)"/>
+<text x="289.0" y="147.0" font-size="12" text-anchor="middle" class="mono muted">reshape</text>
+<rect x="329" y="93" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="349.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="371" y="93" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="391.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="425" y="93" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="445.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="467" y="93" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="487.0" y="118.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="329" y="135" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="349.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="371" y="135" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="391.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<rect x="425" y="135" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="445.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">7</text>
+<rect x="467" y="135" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="487.0" y="160.2" font-size="15" text-anchor="middle" class="mono" opacity="1">8</text>
+<rect x="329" y="177" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="349.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">9</text>
+<rect x="371" y="177" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="391.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">10</text>
+<rect x="425" y="177" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="445.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">11</text>
+<rect x="467" y="177" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="487.0" y="202.2" font-size="15" text-anchor="middle" class="mono" opacity="1">12</text>
+<text x="349.0" y="85.0" font-size="12" text-anchor="middle" class="muted">h0</text>
+<text x="391.0" y="85.0" font-size="12" text-anchor="middle" class="muted"></text>
+<text x="445.0" y="85.0" font-size="12" text-anchor="middle" class="muted">h1</text>
+<text x="487.0" y="85.0" font-size="12" text-anchor="middle" class="muted"></text>
+<text x="328.0" y="236.0" font-size="12" text-anchor="start" class="mono muted">(T, h, d_head) = (3, 2, 2)</text>
+<text x="328.0" y="252.0" font-size="12" text-anchor="start" class="muted">same numbers, grouped per head</text>
+<line x1="520.0" y1="155.0" x2="578.0" y2="155.0" class="arrow" marker-end="url(#ah)"/>
+<text x="549.0" y="147.0" font-size="12" text-anchor="middle" class="mono muted">transpose</text>
+<text x="628.0" y="62.0" font-size="13" text-anchor="start" class="title" style="fill:#4c6ef5">head 0</text>
+<rect x="629" y="71" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="649.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="1">1</text>
+<rect x="671" y="71" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="691.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="1">2</text>
+<rect x="629" y="113" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="649.0" y="138.2" font-size="15" text-anchor="middle" class="mono" opacity="1">5</text>
+<rect x="671" y="113" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="691.0" y="138.2" font-size="15" text-anchor="middle" class="mono" opacity="1">6</text>
+<rect x="629" y="155" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="649.0" y="180.2" font-size="15" text-anchor="middle" class="mono" opacity="1">9</text>
+<rect x="671" y="155" width="40" height="40" rx="3" fill="#4c6ef5" fill-opacity="0.24" stroke="#4c6ef5" stroke-width="1.3" opacity="1"/>
+<text x="691.0" y="180.2" font-size="15" text-anchor="middle" class="mono" opacity="1">10</text>
+<text x="620.0" y="95.0" font-size="12" text-anchor="end" class="muted">t0</text>
+<text x="620.0" y="137.0" font-size="12" text-anchor="end" class="muted">t1</text>
+<text x="620.0" y="179.0" font-size="12" text-anchor="end" class="muted">t2</text>
+<text x="752.0" y="62.0" font-size="13" text-anchor="start" class="title" style="fill:#f08c00">head 1</text>
+<rect x="753" y="71" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="773.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="1">3</text>
+<rect x="795" y="71" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="815.0" y="96.2" font-size="15" text-anchor="middle" class="mono" opacity="1">4</text>
+<rect x="753" y="113" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="773.0" y="138.2" font-size="15" text-anchor="middle" class="mono" opacity="1">7</text>
+<rect x="795" y="113" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="815.0" y="138.2" font-size="15" text-anchor="middle" class="mono" opacity="1">8</text>
+<rect x="753" y="155" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="773.0" y="180.2" font-size="15" text-anchor="middle" class="mono" opacity="1">11</text>
+<rect x="795" y="155" width="40" height="40" rx="3" fill="#f08c00" fill-opacity="0.24" stroke="#f08c00" stroke-width="1.3" opacity="1"/>
+<text x="815.0" y="180.2" font-size="15" text-anchor="middle" class="mono" opacity="1">12</text>
+<text x="628.0" y="218.0" font-size="12" text-anchor="start" class="mono muted">(h, T, d_head) = (2, 3, 2)</text>
+<text x="628.0" y="234.0" font-size="12" text-anchor="start" class="muted">each head sees every token, but only its features</text>
+</svg>

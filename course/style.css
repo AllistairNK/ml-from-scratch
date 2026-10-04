@@ -173,6 +173,10 @@ table.data th { color: var(--muted); font-weight: 500; font-size: 12px; text-tra
 .md details[open] summary { margin-bottom: 8px; }
 .md hr { border: 0; border-top: 1px solid var(--border); margin: 20px 0; }
 .md .katex-display { overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
+.md [id] { scroll-margin-top: 70px; }
+.md img { display: block; max-width: 100%; height: auto; margin: 16px 0 4px; }
+.md img + em, .md p > img:only-child + em { display: block; }
+.md .flash { background: var(--warn-soft); border-radius: 6px; transition: background .4s; }
 .reading-nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
 
 /* ---------- editor / lab ---------- */

@@ -2,6 +2,8 @@
 
 **Prerequisites:** [Decision Trees](../09_decision_tree/LECTURE.md) (the forest reuses that tree), [F5 bias–variance](../00_foundations/F5_ml_basics.md).
 
+**New words?** [overfitting](../00_basics/B1_glossary.md#overfitting) · [sample](../00_basics/B1_glossary.md#sample) · [feature](../00_basics/B1_glossary.md#feature) · [noise](../00_basics/B1_glossary.md#noise) · [index](../00_basics/B1_glossary.md#index) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain why averaging many trees beats one tree (variance reduction)

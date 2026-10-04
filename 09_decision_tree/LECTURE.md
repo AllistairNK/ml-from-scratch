@@ -2,6 +2,8 @@
 
 **Prerequisites:** [F1 boolean masks and np.unique](../00_foundations/F1_numpy.md), [F5 overfitting](../00_foundations/F5_ml_basics.md), recursion in Python.
 
+**New words?** [class](../00_basics/B1_glossary.md#class) · [label](../00_basics/B1_glossary.md#label) · [feature](../00_basics/B1_glossary.md#feature) · [threshold](../00_basics/B1_glossary.md#threshold) · [overfitting](../00_basics/B1_glossary.md#overfitting) · [mask](../00_basics/B1_glossary.md#mask) · or the full [glossary](../00_basics/B1_glossary.md).
+
 **Learning objectives.** After this lecture you can:
 
 - explain how a tree makes predictions and how it's grown greedily
